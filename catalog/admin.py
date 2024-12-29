@@ -5,38 +5,28 @@ from .models import Product, Category
 # Registering admin panel for Product
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('product_name',
-                    'product_description',
-                    'product_image',
+    list_display = ('id',
+                    'product_name',
                     'category',
                     'product_price',
-                    'created_at',
-                    'updated_at'
                     )
 
-    list_filter = ('product_name',
-                    'product_description',
-                    'product_image',
-                    'category',
-                    'product_price',
-                    'created_at',
-                    'updated_at'
+    list_filter = ('category',
                    )
 
     search_fields = ('product_name',
                     'product_description',
-                    'category',
                     )
 
 
 # Registering admin panel for Category
 @admin.register(Category)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('category_name',
-                    'category_description',
+    list_display = ('id',
+                    'category_name',
                     )
 
-    list_filter = ('category_name',
+    list_filter = ('id', 'category_name',
                    )
 
     search_fields = ('category_name',
