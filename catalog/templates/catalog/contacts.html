@@ -29,15 +29,21 @@
                     <table class="table table-striped">
                         <tr>
                             <td class="w-25">Country</td>
-                            <td>USA</td>
+                            {% for contact in contacts_company %}
+                            <td>{{contact.country}}</td>
+                            {% endfor %}
                         </tr>
                         <tr>
                             <td class="w-25">INN</td>
-                            <td>91-1144442</td>
+                            {% for contact in contacts_company %}
+                            <td>{{contact.inn}}</td>
+                            {% endfor %}
                         </tr>
                         <tr>
                             <td class="w-25">Address</td>
-                            <td>Redmond,WA,98052-6399</td>
+                            {% for contact in contacts_company %}
+                            <td>{{contact.address}}</td>
+                            {% endfor %}
                         </tr>
                     </table>
                 </div>
