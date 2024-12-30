@@ -32,3 +32,18 @@ class Product(models.Model):
         verbose_name_plural = 'Products'
         ordering = ['product_name']
 
+
+# Create class Contact
+class Contact(models.Model):
+    country = models.CharField(max_length=150, verbose_name='Country')
+    inn = models.CharField(max_length=20, verbose_name='INN')
+    address = models.CharField(max_length=150, verbose_name='Address')
+
+
+    def __str__(self):
+        return f'{self.country} {self.address}'
+
+    class Meta:
+        verbose_name = 'Contact'
+        verbose_name_plural = 'Contacts'
+        ordering = ['country']
