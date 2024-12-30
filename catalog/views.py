@@ -4,8 +4,6 @@ from django.template.context_processors import request
 from .models import Contact
 
 # Create your views here.
-
-
 def home(request):
     """ Returns html file with mao page"""
     return render(request, 'catalog/home.html')
