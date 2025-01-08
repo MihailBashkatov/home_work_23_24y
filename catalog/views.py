@@ -4,8 +4,6 @@ from django.template.context_processors import request
 from .models import Contact
 
 # Create your views here.
-
-
 def home(request):
     """ Returns html file with mao page"""
     return render(request, 'catalog/home.html')
@@ -16,7 +14,7 @@ def contacts(request):
     """ Return html file. In case in method POST, taking all needed data"""
 
     # Get all values for model Contact to add it in render
-    contacts_company = Contact.objects.all()
+    contacts_company = Contact.hobjects.all()
 
     if request.method == 'POST':
         name = request.POST.get('name')
